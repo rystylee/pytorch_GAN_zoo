@@ -311,10 +311,10 @@ class BaseGAN():
         if buildAvG:
             self.buildAvG()
 
-        if not isinstance(self.netD, nn.DataParallel) and self.useGPU:
-            self.netD = nn.DataParallel(self.netD)
-        if not isinstance(self.netG, nn.DataParallel) and self.useGPU:
-            self.netG = nn.DataParallel(self.netG)
+        # if not isinstance(self.netD, nn.DataParallel) and self.useGPU:
+        #     self.netD = nn.DataParallel(self.netD)
+        # if not isinstance(self.netG, nn.DataParallel) and self.useGPU:
+        #     self.netG = nn.DataParallel(self.netG)
 
         self.netD.to(self.device)
         self.netG.to(self.device)
